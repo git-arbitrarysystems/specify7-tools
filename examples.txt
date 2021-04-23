@@ -1,0 +1,7 @@
+Examples:
+
+All saved queries:
+ ./query-specify.sh --query="/api/specify/spquery/" >> spquery.json
+
+Query with id 20
+ ./query-specify.sh --query="/api/specify/spquery/20/"

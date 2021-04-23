@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<query contextTableId="1" name="DataportalQuery">
+	<field isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.catalogNumber" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.projectNumber" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Life" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Kingdom" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Phylum" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Class" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Order" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Suborder" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Infraorder" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Superfamily" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Family" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Subfamily" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Tribe" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Genus" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Subgenus" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Species" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.Subspecies" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4.taxon.fullName" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Continent" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Country" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.State" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.County" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.localityName" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.latitude1" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.longitude1" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.startDate" value=""/>
+	<field isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.endDate" value=""/>
+</query>
