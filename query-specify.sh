@@ -24,16 +24,16 @@ while [ $# -gt 0 ]; do
       QUERY="${1#*=}"
       ;;
     --help|-h)
-      echo ""
-      echo "Usage:"
-      echo "-u --url\tBase url of the specify server ($SPECIFY_URL)"
-      echo "-n --user\tYour specify username ($USER)"
-      echo "-p --password\tYour password ($PASS)"
-      echo "-q --query\tPath of the API-call ($QUERY)"
-      echo ""
-      echo "Remote example:"
-      echo './query-specify.sh --url=https://specify-test-code.naturkundemuseum.berlin/ -n=YOUR_SPECIFY_USERNAME -p=YOUR_SPECIFY_PASSWORD -q="/api/specify/collectionobject/?catalognumber=dummy_1016"'
-      echo ""
+      echo -e ""
+      echo -e "Usage:"
+      echo -e ""
+      echo -e "-u --url\tBase url of the specify server ($SPECIFY_URL)"
+      echo -e "-n --user\tYour specify username ($USER)"
+      echo -e "-p --password\tYour password ($PASS)"
+      echo -e "-q --query\tPath of the API-call ($QUERY)"
+      echo -e ""
+      echo -e "$(cat examples.txt)"
+      echo -e ""
       exit 0
       ;;
     *)
@@ -47,24 +47,26 @@ done
 
 # SOURCE: https://stackoverflow.com/questions/21306515/how-to-curl-an-authenticated-django-app/24376188#24376188
 
-CURL_BIN="curl -c $COOKIES -b $COOKIES --referer $SPECIFY_URL/accounts/login/" > /dev/null
+CURL_BIN="curl -c $COOKIES -b $COOKIES --referer $SPECIFY_URL/accounts/login/" 
 
 #echo -n "Django Auth: get csrftoken ..."
-$CURL_BIN -s "$SPECIFY_URL/accounts/login/" > /dev/null
+$CURL_BIN "$SPECIFY_URL/accounts/login/" 
 DJANGO_TOKEN="csrfmiddlewaretoken=$(grep csrftoken $COOKIES | sed 's/^.*csrftoken\s*//')"
 
 #echo -n "perform login ..."
-$CURL_BIN -s \
+$CURL_BIN \
     -d "$DJANGO_TOKEN&username=$USER&password=$PASS" \
     -X POST \
-    "$SPECIFY_URL/accounts/login/" > /dev/null
+    "$SPECIFY_URL/accounts/login/" 
 
 #echo -n "do something while logged in ..."
 $CURL_BIN \
     -d "$DJANGO_TOKEN" \
     -X GET \
-    "$SPECIFY_URL$QUERY"
+    "$SPECIFY_URL$QUERY" \
+    | python3 -m json.tool > ./data.json # save prettyfied in data.json
+
     
 
-#echo "logout"
+#echo -e "logout"
 rm $COOKIES
